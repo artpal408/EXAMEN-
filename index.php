@@ -7,4 +7,11 @@
  */
 
 
-echo 'hola';
+session_start();
+
+if(empty($_SESSION['usuario'])){
+    include_once 'vista/Login.vista.php';
+}else{
+    include_once 'vista/Inicio.vista.php';
+}
+
